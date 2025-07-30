@@ -18,11 +18,11 @@ const Header = () => {
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { 
       name: 'Services', 
-      href: '#services',
+      href: '/services',
       hasDropdown: true,
       dropdownItems: [
         'Environmental Assessments',
@@ -34,11 +34,11 @@ const Header = () => {
         'Policy & Research'
       ]
     },
-    { name: 'Training', href: '#training' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Shop', href: '#shop' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Training', href: '/training' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Shop', href: '/shop' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (

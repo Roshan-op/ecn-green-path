@@ -13,15 +13,15 @@ All colors MUST be HSL for consistency.
     --foreground: 158 25% 15%;
     
     /* Primary Green - ECN Brand */
-    --primary: 158 64% 25%;
+    --primary: 110 96% 16%;
     --primary-foreground: 0 0% 98%;
-    --primary-light: 158 48% 35%;
-    --primary-dark: 158 75% 15%;
+    --primary-light: 110 76% 26%;
+    --primary-dark: 110 100% 12%;
     
     /* Secondary Earth Tones */
-    --secondary: 45 25% 88%;
-    --secondary-foreground: 158 25% 15%;
-    --secondary-dark: 45 20% 65%;
+    --secondary: 80 62% 49%;
+    --secondary-foreground: 110 96% 16%;
+    --secondary-dark: 80 52% 39%;
     
     /* Accent Nature Colors */
     --accent: 200 85% 45%;
