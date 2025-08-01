@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', name: 'Facebook' },
+    { icon: Facebook, href: 'https://www.facebook.com/people/Environmental-Concern-Nepal/61558705857205/', name: 'Facebook' },
     { icon: Twitter, href: '#', name: 'Twitter' },
     { icon: Linkedin, href: '#', name: 'LinkedIn' },
     { icon: Instagram, href: '#', name: 'Instagram' }
@@ -43,9 +43,9 @@ const Footer = () => {
                 </div>
               </div>
               <p className="text-primary-foreground/90 mb-6 max-w-md">
-                Leading environmental consulting firm in Nepal, providing innovative solutions for 
-                sustainable development through expert environmental assessments, climate services, 
-                and disaster risk management.
+                Welcome to Environmental Concern Nepal! We're your go-to team for eco-friendly solutions. 
+                Whether it's reducing negative impact or embracing green practices, we're here to guide you 
+                every step of the way🌍
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -103,21 +103,21 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-accent" />
                 <div>
                   <p className="font-medium">Address</p>
-                  <p className="text-primary-foreground/80">Kathmandu, Nepal</p>
+                  <p className="text-primary-foreground/80">Butwal-06 Lumbini Province, Nepal</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-primary-foreground/80">+977-1-XXXXXXX</p>
+                  <p className="text-primary-foreground/80">980-2371916</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-primary-foreground/80">info@ecnnepal.com</p>
+                  <p className="text-primary-foreground/80">info.ecnepal@gmail.com</p>
                 </div>
               </div>
             </div>

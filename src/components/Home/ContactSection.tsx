@@ -50,19 +50,19 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Our Office",
-      details: ["Kathmandu, Nepal", "Bagmati Province"],
+      details: ["Butwal-06 Lumbini Province", "Nepal"],
       action: "Get Directions"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+977-1-XXXXXXX", "+977-98XXXXXXXX"],
+      details: ["980-2371916", "Nepal"],
       action: "Call Now"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@ecnnepal.com", "projects@ecnnepal.com"],
+      details: ["info.ecnepal@gmail.com", "Environmental Services"],
       action: "Send Email"
     },
     {

@@ -36,6 +36,7 @@ const Header = () => {
     },
     { name: 'Training', href: '/training' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Blog', href: '/blog' },
     { name: 'Shop', href: '/shop' },
     { name: 'Contact', href: '/contact' }
@@ -45,8 +46,8 @@ const Header = () => {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-background/95 backdrop-blur-md shadow-medium border-b border-border' 
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-md shadow-medium border-b border-border' 
+          : 'bg-white/90 backdrop-blur-md'
       }`}
     >
       <div className="container-custom">
