@@ -26,80 +26,138 @@ const BlogSection = () => {
   const articles = [
     {
       id: 1,
-      title: "Climate Change Impacts on Nepal's Water Resources: A Comprehensive Analysis",
-      excerpt: "Exploring the effects of climate change on Nepal's water systems and adaptation strategies for sustainable water management in the Himalayas.",
-      author: "Dr. Ramesh Sharma",
-      date: "2024-01-15",
-      readTime: "8 min",
-      category: "Climate Science",
-      image: "https://images.unsplash.com/photo-1500375592092-4000x6000?w=400&h=250&fit=crop",
+      title: "Building Expertise: ECN's Ongoing EIA & IEE Training Workshops",
+      excerpt: "Covers ECN's hands-on workshops for environmental professionals and students in Kathmandu and beyond.",
+      author: "ECN Training Team",
+      date: "2024-12-01",
+      readTime: "5 min",
+      category: "Training",
+      link: "/blog-post-1",
+      image: "/src/assets/blog/eia-training.jpg",
       featured: true
     },
     {
       id: 2,
-      title: "GIS Applications in Environmental Impact Assessment: Best Practices",
-      excerpt: "Learn how Geographic Information Systems are revolutionizing environmental impact assessments with spatial analysis and mapping technologies.",
-      author: "Priya Patel",
-      date: "2024-01-10",
+      title: "How ECN Assesses Infrastructure Projects for Sustainable Growth",
+      excerpt: "Shows ECN's role in road, hydropower, and bridge environmental assessments.",
+      author: "ECN Infrastructure Team",
+      date: "2024-11-30",
       readTime: "6 min",
-      category: "Technology",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop",
+      category: "Infrastructure",
+      link: "/blog-post-2",
+      image: "/src/assets/blog/infrastructure-assessment.jpg",
       featured: false
     },
     {
       id: 3,
-      title: "Biodiversity Conservation Strategies for Protected Areas in Nepal",
-      excerpt: "Examining effective conservation approaches and community engagement strategies for protecting Nepal's rich biodiversity in national parks and reserves.",
-      author: "Dr. Anita Gurung",
-      date: "2024-01-05",
-      readTime: "10 min",
-      category: "Conservation",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=400&h=250&fit=crop",
+      title: "Strengthening Community Forestry Through Research and GIS Tools",
+      excerpt: "Discusses ECN's support of community forestry groups using data and mapping tools.",
+      author: "ECN Forestry Team",
+      date: "2024-11-29",
+      readTime: "5 min",
+      category: "Forestry",
+      link: "/blog-post-3",
+      image: "/src/assets/blog/community-forestry.jpg",
       featured: false
     },
     {
       id: 4,
-      title: "Disaster Risk Reduction in Mountain Communities: Lessons from the Field",
-      excerpt: "Real-world case studies and lessons learned from implementing disaster risk reduction programs in Nepal's mountain communities.",
-      author: "Bikash Thapa",
-      date: "2023-12-28",
+      title: "Climate Change Planning: ECN's Approach to Resilient Communities",
+      excerpt: "Explores how ECN helps local governments plan for climate risks using CSDPs and GIS data.",
+      author: "ECN Climate Team",
+      date: "2024-11-28",
       readTime: "7 min",
-      category: "Disaster Management",
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=250&fit=crop",
+      category: "Climate",
+      link: "/blog-post-4",
+      image: "/src/assets/blog/climate-planning.jpg",
       featured: false
     },
     {
       id: 5,
-      title: "Sustainable Development Goals: Nepal's Environmental Progress",
-      excerpt: "Tracking Nepal's progress towards achieving the UN Sustainable Development Goals with a focus on environmental sustainability targets.",
-      author: "Dr. Sunita Rai",
-      date: "2023-12-20",
-      readTime: "5 min",
-      category: "Policy",
-      image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=400&h=250&fit=crop",
+      title: "ECN's Role in Urban Wastewater & Sanitation Management",
+      excerpt: "Highlights ECN's drainage studies, FSM planning, and urban wastewater solutions.",
+      author: "ECN WASH Team",
+      date: "2024-11-27",
+      readTime: "6 min",
+      category: "Sanitation",
+      link: "/blog-post-5",
+      image: "/src/assets/blog/wastewater-management.jpg",
       featured: false
     },
     {
       id: 6,
-      title: "Air Quality Monitoring in Kathmandu Valley: Trends and Solutions",
-      excerpt: "Analysis of air quality trends in Kathmandu Valley and innovative solutions for reducing urban air pollution in Nepal's capital.",
-      author: "Dr. Rajesh Khadka",
-      date: "2023-12-15",
-      readTime: "9 min",
-      category: "Environmental Health",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop",
+      title: "Disaster Risk Management in Action: ECN's Fieldwork Approach",
+      excerpt: "Details ECN's community-level disaster assessments and flood risk mapping.",
+      author: "ECN Disaster Risk Team",
+      date: "2024-11-28",
+      readTime: "8 min",
+      category: "Disaster Risk",
+      link: "/blog-post-6",
+      image: "/src/assets/blog/disaster-risk.jpg",
+      featured: false
+    },
+    {
+      id: 7,
+      title: "Empowering Youth Through Environmental Education & Field Training",
+      excerpt: "Covers ECN's outreach and internship programs for students and young professionals.",
+      author: "ECN Education Team",
+      date: "2024-11-25",
+      readTime: "6 min",
+      category: "Education",
+      link: "/blog-post-7",
+      image: "/src/assets/blog/youth-education.jpg",
+      featured: false
+    },
+    {
+      id: 8,
+      title: "ECN & the Future of Sustainable Transport in Nepal",
+      excerpt: "Discusses EV policy, ECN's clean transport research, and emission studies.",
+      author: "ECN Transport Team",
+      date: "2024-11-20",
+      readTime: "7 min",
+      category: "Transport",
+      link: "/blog-post-8",
+      image: "/src/assets/blog/sustainable-transport.jpg",
+      featured: false
+    },
+    {
+      id: 9,
+      title: "Floating Wetlands & Nature-Based Solutions: ECN's Green Innovation",
+      excerpt: "Describes ECN's use of wetlands and green infrastructure for water purification.",
+      author: "ECN Innovation Team",
+      date: "2024-11-15",
+      readTime: "5 min",
+      category: "Innovation",
+      link: "/blog-post-9",
+      image: "/src/assets/blog/floating-wetlands.jpg",
+      featured: false
+    },
+    {
+      id: 10,
+      title: "ECN's Project Portfolio: 12+ Environmental Studies Across Nepal",
+      excerpt: "A roundup of ECN's recent and notable projects with impact highlights.",
+      author: "ECN Portfolio Team",
+      date: "2024-11-10",
+      readTime: "6 min",
+      category: "Portfolio",
+      link: "/blog-post-10",
+      image: "/src/assets/blog/project-portfolio.jpg",
       featured: false
     }
   ];
 
   const categories = [
     "All",
-    "Climate Science",
-    "Technology",
-    "Conservation",
-    "Disaster Management",
-    "Policy",
-    "Environmental Health"
+    "Training",
+    "Infrastructure", 
+    "Forestry",
+    "Climate",
+    "Sanitation",
+    "Disaster Risk",
+    "Education",
+    "Transport",
+    "Innovation",
+    "Portfolio"
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -186,10 +244,12 @@ const BlogSection = () => {
                       </div>
                     </div>
                   </div>
-                  <Button className="btn-primary group">
-                    Read Full Article
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <a href={featuredArticle.link}>
+                    <Button className="btn-primary group">
+                      Read Full Article
+                      <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -245,10 +305,12 @@ const BlogSection = () => {
                   </div>
                 </div>
                 
-                <Button className="btn-secondary w-full group text-sm">
-                  Read More
-                  <ArrowRight className="h-3 w-3 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <a href={article.link}>
+                  <Button className="btn-secondary w-full group text-sm">
+                    Read More
+                    <ArrowRight className="h-3 w-3 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </div>
           ))}

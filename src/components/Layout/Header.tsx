@@ -7,6 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isTeamOpen, setIsTeamOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,19 +26,30 @@ const Header = () => {
       href: '/services',
       hasDropdown: true,
       dropdownItems: [
-        'Environmental Assessments',
-        'Climate Services',
-        'GIS & Land Planning',
-        'Disaster Risk Management',
-        'Feasibility Studies',
-        'Environmental Monitoring',
-        'Policy & Research'
+        { name: 'Environmental Assessments', href: '/services/environmental-assessments' },
+        { name: 'Climate Services', href: '/services/climate-services' },
+        { name: 'GIS & Land Planning', href: '/services/gis-planning' },
+        { name: 'Disaster Risk Management', href: '/services/disaster-risk' },
+        { name: 'Feasibility Studies', href: '/services/feasibility-studies' },
+        { name: 'Environmental Monitoring', href: '/services/monitoring' },
+        { name: 'Policy & Research', href: '/services/policy-research' },
+        { name: 'Training & Capacity Building', href: '/services/training' }
       ]
     },
     { name: 'Training', href: '/training' },
     { name: 'Projects', href: '/projects' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Blog', href: '/blog' },
+    { 
+      name: 'Our Team',
+      href: '/team',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Meet Our Team', href: '/team' },
+        { name: 'Leadership', href: '/team#leadership' },
+        { name: 'Join Our Team', href: '/team#careers' }
+      ]
+    },
     { name: 'Shop', href: '/shop' },
     { name: 'Contact', href: '/contact' }
   ];
@@ -70,8 +82,14 @@ const Header = () => {
                 <a
                   href={item.href}
                   className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                  onMouseEnter={() => item.hasDropdown && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.hasDropdown && setIsServicesOpen(false)}
+                  onMouseEnter={() => {
+                    if (item.name === 'Services') setIsServicesOpen(true);
+                    if (item.name === 'Our Team') setIsTeamOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    if (item.name === 'Services') setIsServicesOpen(false);
+                    if (item.name === 'Our Team') setIsTeamOpen(false);
+                  }}
                 >
                   {item.name}
                   {item.hasDropdown && (
@@ -79,23 +97,31 @@ const Header = () => {
                   )}
                 </a>
                 
-                {/* Services Dropdown */}
+                {/* Dropdown Menus */}
                 {item.hasDropdown && (
                   <div 
-                    className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-strong transition-all duration-300 ${
-                      isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                    className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-strong transition-all duration-300 z-50 ${
+                      (item.name === 'Services' && isServicesOpen) || (item.name === 'Our Team' && isTeamOpen) 
+                        ? 'opacity-100 visible translate-y-0' 
+                        : 'opacity-0 invisible -translate-y-2'
                     }`}
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
+                    onMouseEnter={() => {
+                      if (item.name === 'Services') setIsServicesOpen(true);
+                      if (item.name === 'Our Team') setIsTeamOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      if (item.name === 'Services') setIsServicesOpen(false);
+                      if (item.name === 'Our Team') setIsTeamOpen(false);
+                    }}
                   >
                     <div className="py-2">
                       {item.dropdownItems?.map((dropdownItem, index) => (
                         <a
                           key={index}
-                          href={`#service-${index}`}
+                          href={typeof dropdownItem === 'string' ? `#service-${index}` : dropdownItem.href}
                           className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
                         >
-                          {dropdownItem}
+                          {typeof dropdownItem === 'string' ? dropdownItem : dropdownItem.name}
                         </a>
                       ))}
                     </div>

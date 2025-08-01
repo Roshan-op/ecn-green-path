@@ -23,6 +23,8 @@ import BlogPost7 from "./pages/BlogPost7";
 import BlogPost8 from "./pages/BlogPost8";
 import BlogPost9 from "./pages/BlogPost9";
 import BlogPost10 from "./pages/BlogPost10";
+import Team from "./pages/Team";
+import ServiceDetail from "./pages/ServiceDetail";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +54,8 @@ const App = () => (
           <Route path="/shop" element={<Shop />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/services/:service" element={<ServiceDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
