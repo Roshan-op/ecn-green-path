@@ -21,7 +21,6 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { 
       name: 'Services', 
       href: '/services',
@@ -50,7 +49,7 @@ const Header = () => {
       ]
     },
     { 
-      name: 'About Us',
+      name: 'About',
       href: '/about',
       hasDropdown: true,
       dropdownItems: [
@@ -90,16 +89,16 @@ const Header = () => {
               <div key={item.name} className="relative group">
                 <a
                   href={item.href}
-                  className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                  className="story-link flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium"
                   onMouseEnter={() => {
                     if (item.name === 'Services') setIsServicesOpen(true);
                     if (item.name === 'Resources') setIsResourcesOpen(true);
-                    if (item.name === 'About Us') setIsAboutOpen(true);
+                    if (item.name === 'About') setIsAboutOpen(true);
                   }}
                   onMouseLeave={() => {
                     if (item.name === 'Services') setIsServicesOpen(false);
                     if (item.name === 'Resources') setIsResourcesOpen(false);
-                    if (item.name === 'About Us') setIsAboutOpen(false);
+                    if (item.name === 'About') setIsAboutOpen(false);
                   }}
                 >
                   {item.name}
@@ -114,19 +113,19 @@ const Header = () => {
                     className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-strong transition-all duration-300 z-50 ${
                       (item.name === 'Services' && isServicesOpen) || 
                       (item.name === 'Resources' && isResourcesOpen) || 
-                      (item.name === 'About Us' && isAboutOpen) 
+                      (item.name === 'About' && isAboutOpen) 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible -translate-y-2'
                     }`}
                     onMouseEnter={() => {
                       if (item.name === 'Services') setIsServicesOpen(true);
                       if (item.name === 'Resources') setIsResourcesOpen(true);
-                      if (item.name === 'About Us') setIsAboutOpen(true);
+                      if (item.name === 'About') setIsAboutOpen(true);
                     }}
                     onMouseLeave={() => {
                       if (item.name === 'Services') setIsServicesOpen(false);
                       if (item.name === 'Resources') setIsResourcesOpen(false);
-                      if (item.name === 'About Us') setIsAboutOpen(false);
+                      if (item.name === 'About') setIsAboutOpen(false);
                     }}
                   >
                     <div className="py-2">
