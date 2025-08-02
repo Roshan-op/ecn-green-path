@@ -132,7 +132,10 @@ const ProjectsSection = () => {
                 </div>
 
                 {/* Project Action */}
-                <Button className="btn-secondary w-full group">
+                <Button 
+                  className="btn-secondary w-full group relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] hover:bg-gradient-to-r hover:from-primary/90 hover:to-primary hover:text-primary-foreground"
+                  onClick={() => window.location.href = `/projects/${project.id}`}
+                >
                   View Project Details
                   <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
