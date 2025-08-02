@@ -76,12 +76,16 @@ const AboutSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary">
-                Learn More About Us
-              </Button>
-              <Button className="btn-secondary">
-                View Our Projects
-              </Button>
+              <a href="/about">
+                <Button className="btn-primary">
+                  Learn More About Us
+                </Button>
+              </a>
+              <a href="/projects">
+                <Button className="btn-secondary">
+                  View Our Projects
+                </Button>
+              </a>
             </div>
           </div>
 

@@ -164,9 +164,11 @@ const ProjectsSection = () => {
 
         {/* CTA */}
         <div className={`text-center mt-12 fade-in ${isVisible ? 'visible' : ''}`} style={{ animationDelay: '0.6s' }}>
-          <Button className="btn-primary">
-            View All Projects
-          </Button>
+          <a href="/projects">
+            <Button className="btn-primary">
+              View All Projects
+            </Button>
+          </a>
         </div>
       </div>
     </section>

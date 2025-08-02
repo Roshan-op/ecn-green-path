@@ -145,12 +145,16 @@ const ServicesSection = () => {
               environmental challenges. Contact us for a consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-primary">
-                Request Consultation
-              </Button>
-              <Button className="btn-secondary">
-                Download Brochure
-              </Button>
+              <a href="/contact">
+                <Button className="btn-primary">
+                  Request Consultation
+                </Button>
+              </a>
+              <a href="/services">
+                <Button className="btn-secondary">
+                  Download Brochure
+                </Button>
+              </a>
             </div>
           </div>
         </div>

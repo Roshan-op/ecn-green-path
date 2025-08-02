@@ -7,7 +7,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isTeamOpen, setIsTeamOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,21 +37,29 @@ const Header = () => {
         { name: 'Training & Capacity Building', href: '/services/training' }
       ]
     },
-    { name: 'Training', href: '/training' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Training', href: '/training' },
     { 
-      name: 'Our Team',
-      href: '/team',
+      name: 'Resources',
+      href: '#',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Meet Our Team', href: '/team' },
-        { name: 'Leadership', href: '/team#leadership' },
-        { name: 'Join Our Team', href: '/team#careers' }
+        { name: 'Blog & Insights', href: '/blog' },
+        { name: 'Gallery', href: '/gallery' },
+        { name: 'Shop', href: '/shop' }
       ]
     },
-    { name: 'Shop', href: '/shop' },
+    { 
+      name: 'About Us',
+      href: '/about',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Our Story', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Leadership', href: '/team#leadership' },
+        { name: 'Careers', href: '/team#careers' }
+      ]
+    },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -84,11 +93,13 @@ const Header = () => {
                   className="flex items-center text-foreground hover:text-primary transition-colors duration-300 font-medium"
                   onMouseEnter={() => {
                     if (item.name === 'Services') setIsServicesOpen(true);
-                    if (item.name === 'Our Team') setIsTeamOpen(true);
+                    if (item.name === 'Resources') setIsResourcesOpen(true);
+                    if (item.name === 'About Us') setIsAboutOpen(true);
                   }}
                   onMouseLeave={() => {
                     if (item.name === 'Services') setIsServicesOpen(false);
-                    if (item.name === 'Our Team') setIsTeamOpen(false);
+                    if (item.name === 'Resources') setIsResourcesOpen(false);
+                    if (item.name === 'About Us') setIsAboutOpen(false);
                   }}
                 >
                   {item.name}
@@ -101,17 +112,21 @@ const Header = () => {
                 {item.hasDropdown && (
                   <div 
                     className={`absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-strong transition-all duration-300 z-50 ${
-                      (item.name === 'Services' && isServicesOpen) || (item.name === 'Our Team' && isTeamOpen) 
+                      (item.name === 'Services' && isServicesOpen) || 
+                      (item.name === 'Resources' && isResourcesOpen) || 
+                      (item.name === 'About Us' && isAboutOpen) 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible -translate-y-2'
                     }`}
                     onMouseEnter={() => {
                       if (item.name === 'Services') setIsServicesOpen(true);
-                      if (item.name === 'Our Team') setIsTeamOpen(true);
+                      if (item.name === 'Resources') setIsResourcesOpen(true);
+                      if (item.name === 'About Us') setIsAboutOpen(true);
                     }}
                     onMouseLeave={() => {
                       if (item.name === 'Services') setIsServicesOpen(false);
-                      if (item.name === 'Our Team') setIsTeamOpen(false);
+                      if (item.name === 'Resources') setIsResourcesOpen(false);
+                      if (item.name === 'About Us') setIsAboutOpen(false);
                     }}
                   >
                     <div className="py-2">
@@ -130,9 +145,11 @@ const Header = () => {
               </div>
             ))}
             
-            <Button className="btn-primary ml-4">
-              Get Quote
-            </Button>
+            <a href="/contact">
+              <Button className="btn-primary ml-4">
+                Get Quote
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -160,9 +177,11 @@ const Header = () => {
               </a>
             ))}
             <div className="px-4 pt-4">
-              <Button className="btn-primary w-full">
-                Get Quote
-              </Button>
+              <a href="/contact">
+                <Button className="btn-primary w-full">
+                  Get Quote
+                </Button>
+              </a>
             </div>
           </nav>
         </div>

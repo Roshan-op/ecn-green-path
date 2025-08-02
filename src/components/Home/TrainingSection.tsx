@@ -198,9 +198,11 @@ const TrainingSection = () => {
               </div>
 
               {/* Action Button */}
-              <Button className="btn-primary w-full">
-                Register Now
-              </Button>
+              <a href="/training">
+                <Button className="btn-primary w-full">
+                  Register Now
+                </Button>
+              </a>
             </div>
           ))}
         </div>
@@ -238,12 +240,16 @@ const TrainingSection = () => {
               tailored to your specific requirements and delivered at your preferred location.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-primary">
-                Request Custom Training
-              </Button>
-              <Button className="btn-secondary">
-                View Training Calendar
-              </Button>
+              <a href="/contact">
+                <Button className="btn-primary">
+                  Request Custom Training
+                </Button>
+              </a>
+              <a href="/training">
+                <Button className="btn-secondary">
+                  View Training Calendar
+                </Button>
+              </a>
             </div>
           </div>
         </div>
